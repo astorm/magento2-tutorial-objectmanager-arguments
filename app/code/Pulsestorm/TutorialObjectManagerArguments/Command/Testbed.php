@@ -33,7 +33,7 @@ class Testbed extends Command
     {
         $this->output = $output;
         $output->writeln("Installed!");          
-        //$this->showPropertiesForObject();
+        // $this->showPropertiesForObject();
     }
     
     protected function showPropertiesForObject()
@@ -71,7 +71,8 @@ class Testbed extends Command
     
     protected function outputValueOfObject($thing)
     {
-        $this->output('  of the class: ' . get_class($thing));
+        $this->output('  created with the class: ');
+        $this->output('  ' . get_class($thing));
         
     }
 
@@ -87,7 +88,7 @@ class Testbed extends Command
     
     protected function outputValueOfBoolean($thing)
     {
-        $this->output('  with a value of: ' . $thing);
+        $this->output('  with a value of: ' . ($thing ? 'true' : 'false'));
     }        
 
     protected function outputValueOfArray($thing)
